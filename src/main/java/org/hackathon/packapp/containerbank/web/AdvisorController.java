@@ -13,6 +13,7 @@ import org.hackathon.packapp.containerbank.model.Advisors;
 import org.hackathon.packapp.containerbank.repository.AdvisorRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -33,6 +34,7 @@ public class AdvisorController {
     }    
     
     @RequestMapping("/advisors")
+    @CrossOrigin(origins="*")
     public
     @ResponseBody
     Advisors showResourcesAdvisorList() throws JsonProcessingException {
